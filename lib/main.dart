@@ -8,7 +8,6 @@ import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
-  // Asegurar los canales de flutter
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
     url: 'https://rrmvdvtmdkqqwlrkiutv.supabase.co',
@@ -36,6 +35,7 @@ class SenaBeatsApp extends StatelessWidget {
     return Consumer<MusicProvider>(
       builder: (context, musicProvider, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false, // ✅ QUITA el banner DEBUG
           theme: ThemeData(
             useMaterial3: true,
             colorScheme: ColorScheme.fromSeed(

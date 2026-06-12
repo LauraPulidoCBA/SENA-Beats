@@ -7,7 +7,6 @@ class FavouritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Accedemos a la lista de favoritos global
     final favProvider = context.watch<FavouritesProvider>();
     final favs = favProvider.favourites;
 
@@ -20,7 +19,27 @@ class FavouritesScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final track = favs[index];
                 return ListTile(
-                  leading: Image.network(track.image),
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                      track.image,
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        // ✅ Evita las líneas rojas si falla la conexión
+                        return Container(
+                          width: 50,
+                          height: 50,
+                          color: Colors.grey[800],
+                          child: const Icon(
+                            Icons.music_note,
+                            color: Colors.white54,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   title: Text(track.title),
                   subtitle: Text(track.artist),
                   trailing: IconButton(

@@ -17,18 +17,16 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
 
-  // Lista de pantallas para navegar
+  // ✅ Lista de pantallas corregida
   final List<Widget> _pages = [
-    const SearchScreen(),
-    const FavouritesScreen(),
-    const ProfileScreen(),
-    const RemoteMissionsScreen(),
+    const SearchScreen(),         // index 0 → Buscar
+    const RemoteMissionsScreen(), // index 1 → Misiones
+    const FavouritesScreen(),     // index 2 → Favoritos
+    const ProfileScreen(),        // index 3 → Perfil
   ];
 
   @override
   Widget build(BuildContext context) {
-    // Escuchamos el estado de autenticación
-
     final authProvider = context.watch<AuthProvider>();
 
     if (!authProvider.isAuthenticated) {
@@ -82,14 +80,9 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           const MiniPlayer(),
           BottomNavigationBar(
-            type: BottomNavigationBarType
-                .fixed, 
-            backgroundColor: Theme.of(
-              context,
-            ).colorScheme.surface, 
-            selectedItemColor: Theme.of(
-              context,
-            ).colorScheme.primary,
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: Theme.of(context).colorScheme.surface,
+            selectedItemColor: Theme.of(context).colorScheme.primary,
             unselectedItemColor: Colors.grey,
             currentIndex: _currentIndex,
             onTap: (index) => setState(() => _currentIndex = index),
@@ -98,7 +91,10 @@ class _MainScreenState extends State<MainScreen> {
                 icon: Icon(Icons.search),
                 label: "Buscar",
               ),
-              BottomNavigationBarItem(icon: Icon(Icons.web), label: "Misiones"),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.web),
+                label: "Misiones",
+              ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.favorite),
                 label: "Favoritos",
@@ -114,3 +110,4 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 }
+
