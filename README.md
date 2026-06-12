@@ -28,6 +28,16 @@
 
 - Al reproducir una cancion queda sonando esa y quiero reproducir otra no se reproduce si no que toca presionarle el boton de reproducir
 
+- El boton de reproduccion tiene una animacion al reproducir una cancion
+
+- Al presionar el boton de favoritos no vibra
+
+- Cuando se abre la cancion a parece una nueva vista
+
+- Hay detailscreem de cada cancion que utiliza una animacion que agranda la imagen de la cancion al entrar a la vista de detailscreem
+
+- 
+
 ---
 
 
