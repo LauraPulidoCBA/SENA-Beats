@@ -22,6 +22,8 @@
 - **Pantalla Misiones sin identificación**  
   La vista `Misiones` debería reconocer si está en el **SENA Mosquera** y mostrar misiones relacionadas con esa ubicación.
 
+- En los favoritos la cancion no se reproduce
+
 ---
 
 
