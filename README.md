@@ -24,6 +24,8 @@
 
 - En los favoritos la cancion no se reproduce
 
+- El repruductor se traba y se pausa y se tiene que volver a presionar el boton reproducir
+
 ---
 
 
