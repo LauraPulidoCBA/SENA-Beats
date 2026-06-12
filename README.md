@@ -17,7 +17,10 @@
   Solo era posible iniciar la reproducción tocando la foto. 
 
 - **MiniPlayer sin navegación**  
-  El MiniPlayer inferior mostraba la canción activa, pero no permitía abrir la pantalla de detalle. 
+  El MiniPlayer inferior mostraba la canción activa, pero no permitía abrir la pantalla de detalle.
+
+- **Pantalla Misiones sin identificación**  
+  La vista `Misiones` debería reconocer si está en el **SENA Mosquera** y mostrar misiones relacionadas con esa ubicación.
 
 ---
 
