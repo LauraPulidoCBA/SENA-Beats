@@ -26,6 +26,8 @@
 
 - El repruductor se traba y se pausa y se tiene que volver a presionar el boton reproducir
 
+- Al reproducir una cancion queda sonando esa y quiero reproducir otra no se reproduce si no que toca presionarle el boton de reproducir
+
 ---
 
 
